@@ -1,8 +1,0 @@
-first download and install git and vetify it by"git -v"
-second goto github.com and create an account by signup. create a repository also
-1. in vscode left side--> accounts ->sign in--> choose github and it will open broweser and github login screen , enter username,
-password--> login-->authorize-->it will rediect to vscode
-
-actual process:
-open terminal---> new terimal--> goto specific folder
-1.git init  -  it will initiate git into your folder
