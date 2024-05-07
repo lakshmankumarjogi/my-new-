@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cat Opening Door Animation</title>
+<style>
+  body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .door-frame {
+    width: 300px;
+    height: 500px;
+    position: relative;
+  }
+
+  .door {
+    width: 150px;
+    height: 500px;
+    background-color: brown;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 0 10px 10px 0;
+    transition: transform 1s ease-in-out;
+  }
+
+  .door.open {
+    transform: translateX(-100%);
+  }
+
+  .cat {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    transition: transform 1s ease-in-out;
+  }
+
+  .cat.open-door {
+    transform: translateY(-10000px);
+  }
+
+</style>
+</head>
+<body>
+
+<div class="door-frame">
+  <div class="door"></div>
+  <div class="cat"></div>
+</div>
+
+<script>
+  // Simulate cat opening the door after 2 seconds
+  setTimeout(function() {
+    document.querySelector('.door').classList.add('open');
+    document.querySelector('.cat').classList.add('open-door');
+  }, 2000);
+</script>
+
+</body>
+</html>
