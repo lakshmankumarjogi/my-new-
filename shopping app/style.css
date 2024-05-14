@@ -1,0 +1,196 @@
+/* Add this CSS to style.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+#header {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    background-color: #4CAF50; /* Green header */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Set a high z-index to ensure it's above other elements */
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+#symbol {
+    font-size: 28px;
+}
+
+#cart {
+    font-size: 24px;
+    margin-right: 20px;
+}
+
+#cart span {
+    margin-left: 5px;
+}
+
+/* Add this CSS to style.css */
+
+#main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px; /* Add gap between grid items */
+    padding-top: 120px; /* Adjusted to accommodate header */
+    margin: 0 auto;
+    max-width: 1200px; /* Limited width for better readability */
+}
+
+.procard {
+    height: auto;
+    width: 100%;
+    border: 10px solid #4CAF50;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 17px;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 20px; /* Add bottom margin between product cards */
+}
+
+
+.procard:hover {
+    transform: scale(1.05); /* Slightly larger on hover */
+}
+
+.product_img {
+    height: 200px;
+    width: 100%; /* Take full width */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+
+.title {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.price {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.btn {
+    margin-top: auto; /* Push to bottom */
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn.add-to-cart:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.btn.show-desc {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn.show-desc:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Shopping Cart */
+#cart {
+    height: auto;
+    width: auto;
+    border: 5px solid #4CAF50;
+    background-color: #fff;
+    z-index: 20;
+    text-align: center;
+    position: fixed;
+    font-size: 20px;
+    left: 20px; /* Positioned on the left side */
+    bottom: 20px; /* Positioned near the bottom */
+    border-radius: 10px;
+    font-weight: 700;
+    padding: 10px; /* Add padding for better appearance */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    visibility: hidden;
+}
+
+#cart p {
+    margin: 0;
+    padding: 5px;
+}
+
+/* Description Modal */
+#description {
+    height: auto;
+    width: auto;
+    max-width: 100%; /* Limit maximum width for better readability */
+    max-height: 80vh;
+    opacity: 0.9;
+    margin: auto;
+    border: 1px solid #4CAF50;
+    padding: 20px;
+    font-size: 20px;
+    z-index: 20;
+    position: fixed;
+    background-color: white;
+    color: #333;
+    box-sizing: border-box;
+    border-radius: 20px;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+    top: 50%; /* Position at 50% from the top */
+    left: 50%; /* Position at 50% from the left */
+    transform: translate(-50%, -50%); /* Center the modal */
+}
+
+#description p {
+    text-align: center;
+}
+
+#clsdesc {
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#clsdesc:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.procard:hover .added-to-cart {
+    opacity: 1; /* Show on hover */
+}
+

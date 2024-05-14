@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #0d100025;
+}
+
+.logo-img {
+    width: 50px;
+    height: auto;
+    margin-left: auto;
+}
+
+.company-name {
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 30px;
+    font-size: 16px;
+    transition: transform 0.3s ease; /* Apply transition effect on transform */
+}
+
+nav a:hover {
+    transform: translateY(-3px); /* Move link upward on hover */
+}
+
+.hero {
+    background-image: url('interior.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content {
+    padding: 20px;
+    background-color: rgba(16, 2, 0, 0.464);
+    border-radius: 10px;
+    border: #f0f1eb;
+    font-size: larger;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgba(191, 237, 5, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+button:hover {
+    animation: scrollAnimation 0.5s ease infinite alternate;
+}
+
+@keyframes scrollAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
